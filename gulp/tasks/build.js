@@ -47,10 +47,10 @@ var defaultConfig = {
 
 // front-end webpack config, using the config function to merge
 var frontendConfig = config({
-    entry: './public/js/main.js',
+    entry: './docs/js/main.js',
     output: {
       //path: path.join(__dirname, 'static/build'),
-      path: './public/build',
+      path: './docs/build',
       filename: 'bundle.js'
      },
      plugins: [
@@ -118,7 +118,7 @@ gulp.task('cleanUpBackend', function() {
 });
 
 gulp.task('cleanUpFrontend', function() {
-    return del('./public/build');
+    return del('./docs/build');
 });
 
 gulp.task('frontend-build', ['cleanUpFrontend'], function(done){
